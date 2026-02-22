@@ -1,0 +1,36 @@
+project:
+  name: perturbation-closed-loop-demo
+  seed: 42
+
+paths:
+  train_data: data/raw/virtual_cell_challenge_train.h5ad
+  external_test_data: data/raw/external_perturbseq_test.h5ad
+  output_dir: results
+  qpcr_template: data/metadata/qpcr_panel_template.csv
+
+split:
+  strategy: holdout_genes
+  holdout_fraction: 0.2
+
+models:
+  run_gears: true
+  run_scgen: true
+
+baselines:
+  run_ate: true
+  run_mean: true
+  run_linear: true
+  linear_model: ridge
+
+metrics:
+  - pearson
+  - spearman
+  - mse
+  - direction_accuracy
+
+wetlab:
+  platform: DLD-1_organoid
+  perturbation_type: CRISPRi_or_siRNA
+  candidate_count: 2
+  markers_per_candidate: 10
+  direction_pass_threshold: 0.7
