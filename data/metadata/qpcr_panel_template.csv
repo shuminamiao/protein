@@ -1,0 +1,6 @@
+gene,predicted_logfc,predicted_direction,pathway,primer_fwd,primer_rev,is_housekeeping,notes
+AXIN2,0.0,up,WNT,,,,,candidate marker
+LGR5,0.0,up,Stemness,,,,,candidate marker
+MYC,0.0,up,Proliferation,,,,,candidate marker
+CDKN1A,0.0,down,Cell cycle,,,,,candidate marker
+GAPDH,0.0,NA,Housekeeping,,,,true,reference gene

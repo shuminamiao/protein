@@ -1,0 +1,19 @@
+name: perturb-loop
+channels:
+  - conda-forge
+  - pytorch
+dependencies:
+  - python=3.10
+  - pip
+  - numpy
+  - pandas
+  - scipy
+  - scikit-learn
+  - pyyaml
+  - jupyterlab
+  - pytorch
+  - pip:
+      - scanpy
+      - anndata
+      - scgen
+      - gears
